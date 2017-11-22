@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/regist.css" />
+</head>
+<body>
+<div id="header">
+	<div>
+		<h1><a href="#">华强商城</a></h1>
+		<p>全场运费5元，满59元包邮</p>
+	</div>
+</div>
+<div id="main">
+	<div class="content">
+		<div class="con-top">
+			<div>
+				<div>
+					<p>手机注册</p>
+				</div>
+			</div>
+		</div>
+		<div class="con-center ">
+			<ul>
+				<li class="fontN">手机号码：</li>
+				<li class="input">
+					<input type="text" maxlength="11" name="mobile" id="mobile" class="reVerifiy" tips="请输入正确的手机号并验证">
+					<em class="txtRed" id="txt1"></em>
+				</li>
+			</ul>
+			<ul class="yanzheng">
+				<li class="fontN">验证码：</li>
+				<li class="input">
+					<input type="text" maxlength="6" style="width:115px;float:left" id="mcaptcha" class="reVerifiy">
+					<span id="show" ></span>
+					<span>
+						看不清？
+						<a href="#" id="changeimg">换一张</a>
+					</span>
+					<em class="txtRed" id="txt2"></em>
+				</li>
+			 </ul>
+			<ul>
+				<li class="fontN">手机验证码：</li>
+				<li class="input">
+					<input type="text" maxlength="6" name="moblieCaptcha" id="moblieCaptcha" tips="请输入接收到的手机验证" style="margin-right:100px">
+					<em class="txtRed" id="txt3"></em>
+					<div id="getMoblieCaptcha" class="getMoblieCaptcha disabled" style="cursor: pointer">获取验证码</div>
+				</li>
+			</ul>
+			<ul>
+				<li class="fontN">登录密码：</li>
+				<li class="input">
+					<input type="password" maxlength="16" name="password" id="password" tips="6-16位字符，推荐使用数字、字母和符号的组合密码">
+					<em class="txtRed" id="txt4"></em>
+				</li>
+			</ul>
+			<ul>
+				<li class="fontN">确认密码：</li>
+
+				<li class="input">
+					<input type="password" maxlength="16"  id="confirm" class="reVerifiy" tips="请再次输入密码">
+					<em class="txtRed" id="txt5"></em>
+				</li>
+			</ul>
+			<div class="server_agreement">
+				<input id="hqb_protocol" type="checkbox" name="hqb_protocol" checked="">
+				 我已阅读并同意<a href="#">《华强北商城服务协议》</a>
+			</div>
+		</div>
+		<div class="w960">
+			<div class="regist_submit">
+				<input type="hidden" class="txtGreNum" value="1" name="txtGreNum">
+				<input type="button" id="register_submit" value="立即注册" class="ser">
+			</div>
+		</div>
+		<div class="uni_login_box cfix">
+				<p class="uni_tt">已有账号，<a class="goto_sign" href="mylogin.html" style="color: #2c82f9;text-decoration: none;">直接登录&gt;&gt;</a></p>
+				<ul class="uni_list">
+					<li><a class="qq_l" href="#" target="_blank" style="background-position:left 0px">使用QQ登录</a></li>
+					<li><a class="xl_l" href="#" target="_blank" style="background-position:left -17px">使用新浪微博登录</a></li>
+					<li><a class="al_l" href="#" target="_blank" style="background-position:left -34px">使用支付宝登录</a></li>
+				</ul>
+			</div>
+	</div>
+</div>
+<div id="footer">
+	<div class="content">
+		<div class="copyright">
+			Copyright © 2010-2015 深圳市华强北在线商务有限公司 版权所有 <a target="_blank" href="#">粤ICP备12050212号-1</a>
+			<a href="#" target="_blank"><img alt="深圳网警" title="深圳网警" src="img/foot1.jpg"></a>
+			<a href="#"target="_blank"><img alt="经营许可证" title="增值电信业务经营许可证" src="img/foot2.jpg"></a>
+			<a href="#" rel="nofollow" target="_blank"><img alt="市场监制主体身份认证" title="市场监制主体身份认证" src="img/foot3.jpg"></a>
+			<a target="_blank" href="#">
+			<img src="img/foot4.jpg" title="电子商务消费者服务站" alt="电子商务消费者服务站"></a>
+			<a class="f_link" href="#" target="_blank">友情链接</a>
+			<a href="#" target="_blank" class="s_map">网站地图</a>关注我们：<a href="#" target="_blank"><img src="img/foot5.jpg" title="新浪微博" alt="新浪微博"></a>
+			<a href="#" target="_blank">
+			<img src="img/foot6.jpg" title="腾讯微博" alt="腾讯微博"></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<script>
+var numStr = "";
+var isTrue=true ;
+window.onload=function(){
+	check();
+	document.getElementById("changeimg").onclick=function(){
+		check();
+	}
+	document.getElementById("mcaptcha").onblur=function(){
+		test();
+	}
+	document.getElementById("mobile").onblur = function(){
+		//手机号码：11位，  1开头（后者13|18|17），其余全是数字
+		//var reg = /^1[0-9]{10}$/;
+		var reg = /^1[35784][0-9]{9}$/;
+		var str= document.getElementById("mobile").value;
+		if(reg.test(str)){
+			document.getElementById("txt1").style.cssText="display:block;background: url(img/reg_tipbg.jpg) 0px -23px no-repeat;";
+			document.getElementById("txt1").innerHTML="";
+			return isTrue=true ;
+		}else{
+			if(str==""){
+				document.getElementById("txt1").innerHTML="请输入手机号";
+				document.getElementById("txt1").style.cssText="display:block;background: url(img/reg_tipbg.jpg) 0px 0px no-repeat;";
+			}else{
+				document.getElementById("txt1").style.cssText="display:block;background: url(img/reg_tipbg.jpg) 0px 0px no-repeat;";
+				document.getElementById("txt1").innerHTML="手机号格式错误，请重新输入";
+				return isTrue=false ;
+			}
+
+		}
+	}
+	document.getElementById("password").onblur = function(){
+		//密码： 6-16；以字母、数字、下划线开头
+		var reg = /^[\w]\w{5,15}$/;
+		var str= document.getElementById("password").value;
+		if(reg.test(str)){
+			document.getElementById("txt4").style.cssText="display:block;background: url(img/reg_tipbg.jpg) 0px -23px no-repeat;";
+			document.getElementById("txt4").innerHTML="";
+			return isTrue=true ;
+		}else{
+			document.getElementById("txt4").style.cssText="display:block;background: url(img/reg_tipbg.jpg) 0px 0px no-repeat;";
+			document.getElementById("txt4").innerHTML="密码格式不正确";
+			return isTrue=false ;
+		}
+	}
+	document.getElementById("confirm").onblur = function(){
+		var pass1= document.getElementById("password").value;
+		var pass2= document.getElementById("confirm").value;
+		if(pass1==pass2){
+			document.getElementById("txt5").style.cssText="display:block;background: url(img/reg_tipbg.jpg) 0px -23px no-repeat;";
+			document.getElementById("txt5").innerHTML="";
+			return isTrue=true ;
+		}else{
+			document.getElementById("txt5").style.cssText="display:block;background: url(img/reg_tipbg.jpg) 0px 0px no-repeat;";
+			document.getElementById("txt5").innerHTML="密码不相同";
+			return isTrue=false ;
+		}
+	}
+}
+function check(){
+	numStr="";
+	var arr=[];
+	var numArr=[];
+	var str="";
+	for(var i=49;i<=57;i++){
+		arr.push("<img src='images/"+i+".jpg'/>");
+		numArr.push(String.fromCharCode(i))
+	}
+	for(var i=65;i<=90;i++){
+		arr.push("<img src='images/"+i+".jpg'/>");
+		numArr.push(String.fromCharCode(i))
+	}
+	for(var i=97;i<=122;i++){
+		arr.push("<img src='images/"+i+".jpg'/>");
+		numArr.push(String.fromCharCode(i))
+	}
+	for(var i=0;i<4;i++){
+		var num=parseInt(Math.random()*arr.length);
+		str+=arr[num]+"";
+		numStr+=numArr[num];
+	}
+	//console.log(arr);
+	//console.log(numArr)
+	document.getElementById("show").innerHTML=str;
+}	
+function test(){
+	var write = document.getElementById("mcaptcha").value.toLowerCase();
+	var see = numStr.toLowerCase();
+//		var isTrue=true ;
+
+	if(write==see){
+		document.getElementById("txt2").style.cssText="display:block;background: url(img/reg_tipbg.jpg) 0px -23px no-repeat;";
+		document.getElementById("txt2").innerHTML="";
+		return isTrue=true ;
+	}else{
+		document.getElementById("txt2").style.cssText="display:block;background: url(img/reg_tipbg.jpg) 0px 0px no-repeat;";
+		document.getElementById("txt2").innerHTML="验证码不正确";
+		return isTrue=false ;
+	}
+}
+		
+</script>
+
+
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+$(function(){
+	//验证用户名是否存在
+	$("#mobile").blur(function(){
+		$.get(
+			"checkUser.php",
+			{
+				"mobile":$("#mobile").val()
+			},
+			function(data){
+				if(data=="0"){
+					$("#txt1").css({
+						"display":"block",
+						"background":"url(img/reg_tipbg.jpg) 0px 0px no-repeat"
+					});
+					$("#txt1").html("手机号已使用");
+				}else{
+					$("#txt1").html("该用户可以注册");
+					$("#txt1").css({
+						"display":"block",
+						"background": "url(img/reg_tipbg.jpg) 0px -23px no-repeat"
+					});
+					$("#register_submit").click(function(){
+						$.post(
+							"users.php",
+							{
+								"mobile":$("#mobile").val(),
+								"password":$("#password").val()
+							}
+
+						);
+						location.href="mylogin.html";
+					});
+				}
+			}
+		);
+
+	});
+});
+	
+</script>

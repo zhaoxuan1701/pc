@@ -1,0 +1,587 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img { border:none; }
+address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal; }
+ul, ol{ list-style:none; }
+body {font:12px "Microsoft Yahei";}
+a {text-decoration:none; }
+a:visited { color:#666; }
+a:hover, a:active, a:focus { color:#ff8400; text-decoration:underline; } 
+.left{float:left}
+.right{float:right}
+.clear:after{content:"";display:block;clear:both;height:0;overflow:hidden}
+.content{margin:0 auto}
+li {
+    float: left;
+}
+
+/*-----------------------banner----------------------------*/
+#banner{
+    width:100%;
+    height:360px;
+    position:relative;
+    overflow:hidden ;
+}
+
+#banner #lunbotu{
+    width:100%;
+    height:360px;
+}
+
+//#banner .aside-nav{
+//  position:absolute;
+//  left:160px;
+//  top:0px;
+//  width:175px;
+//  height:360px;
+//  background:#313130;
+//  li{
+//      width:175px;
+//      height:45px;
+//      position:relative;
+//      a{
+//          font-size:14px;
+//          color:#FFFFFF;
+//          line-height:45px;
+//          display: block;
+//          text-indent: 24px;;
+//      }
+//      div{
+//           width:300px;
+//          height:360px;
+//          background:#FFFFFF;
+//          position:absolute;
+//          top:0px;
+//          left:175px;
+//      }
+//    
+//  }
+//  li:hover a{
+//      background:#FFFFFF;
+//      color:#E10808;
+//  }
+//}
+#banner .aside-nav {
+  position: absolute;
+  left: 75px;
+  top: 0px;
+  width: 175px;
+  height: 360px;
+  background: transparent; }
+  #banner .aside-nav li {
+    width: 175px;
+    height: 45px;
+   }
+    #banner .aside-nav li>a {
+      font-size: 14px;
+      color: #FFFFFF;
+      line-height: 45px;
+      display: block;
+      text-indent: 24px; }
+  #banner .aside-nav li:hover >a {
+    background: #FFFFFF;
+    color: #E10808;
+    
+}
+#banner .aside-nav li:hover div{
+            display:block;
+}
+
+ #banner .aside-nav li div{
+             width:300px;
+            height:360px;
+            background:#FFFFFF;
+            position:absolute;
+            top:0px;
+            left:175px;
+            display: none;
+}
+#banner .aside-nav li div a{
+         font-size: 10px;
+      color: #666666;
+      margin:10px;
+      width:50px;
+      line-height: 25px;
+      display:inline-block;
+      text-indent: 0px;
+      text-align: center;
+}
+#banner .aside-nav li div a:hover{
+        color: #E10808;
+}
+
+
+#main{width:100%;}
+#main .nav{
+    padding: 18px;
+    text-align: center;
+}
+#main .nav  a{
+        display: inline-block;
+        margin: 0 30px;
+        font-size: 16px;
+        color: #e10808;
+        text-align: center;
+        line-height: 32px;
+    }
+ #main .nav .iconfont{
+             font-size: 32px;
+             text-align: center;
+             display: inline-block;
+             border-radius: 50%;
+ }
+ #main .nav  a:hover{
+           text-decoration: none;  
+ }
+ #main .nav  a:hover  .iconfont{
+               background:#e10808;
+               color:#FFFFFF;
+}
+#main .con{
+        text-align: center;
+}
+#main .con a{
+    display: inline-block;
+    margin: 5px;
+    width: 320px;
+    height: 320px;
+    overflow: hidden;
+    text-decoration: none;
+}
+#main .con a img{
+        width: 320px;
+        height: 320px;
+        vertical-align: middle;
+}
+#main .con .tips{
+    position: relative;
+    padding: 0 40px;
+    top: -115px;
+    left: 0px;
+}
+#main .tips .p1{
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #000;
+    overflow: hidden;
+}
+#main .tips .p2{
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    color: #000;
+    overflow: hidden;
+}
+#main .tips:hover p{
+      color: #e10808;
+}
+#main .todaypreference{
+    width:1230px;
+    height:680px;
+    margin:0 auto;
+}
+#main .title{
+    margin-top: 30px;
+    border-bottom: 2px solid #000;
+}
+#main .todaypreference h1{
+     border-bottom: 3px solid #000;
+     font-size: 32px;
+    line-height: 50px;
+    margin: 0 auto;
+    width: 128px;
+    height: 44px;
+}
+#main .todaypreference .todayshow{
+        margin-top: 30px;
+        margin-left: -10px;
+    li{
+            float: left;
+            padding: 6px;
+            margin-left: 10px;
+            margin-bottom: 12px;
+            width: 594px;
+            height: 290px;
+            background-color: #ffffff;
+            border: 1px solid #eaeaea;
+            position: relative;
+            .pic{
+                        position: relative;
+                        width: 306px;
+                        height: 276px;
+                        overflow: hidden;
+                        float: left;
+                        display: inline;
+            }
+            .lamp{
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        z-index: 10;
+                        line-height: 18px;
+                        text-align: center;
+                        color: #ffffff;
+                        font-size: 18px;
+                        background:#e10808;
+            }
+            .goodsname{
+                        padding: 10px;
+                        width: 264px;
+                         float: right;
+                        display: inline;
+                       > a{
+                                height: 30px;
+                                line-height: 30px;
+                                font-size: 18px;
+                                font-weight: 600;
+                                display: block;
+                                color:#000000;
+                                overflow: hidden;
+                        }
+                        .content{
+                                height: 20px;
+                                line-height: 20px;
+                                color: #656565;
+                                font-size: 14px;
+                                display: block;
+                                overflow: hidden;
+                                font-weight: normal;
+                        }
+                        a:hover{
+                            color:#e10808;
+                            text-decoration: none;
+                        }
+                        .btn{
+                                    position: relative;
+                                    z-index: 10;
+                                    padding: 20px 10px 10px 50px;
+                                    margin: 20px 0 20px -50px;
+                                    width: 309px;
+                                    height: 64px;
+                                    line-height: 84px;
+                                   background: url(../img/sprites1.png) no-repeat 10px 30px;
+                                    color: #fff;
+                                    i{
+                                        font-size: 28px;
+                                        font-weight: 600;
+                                    }
+                                    a{
+                                            padding: 5px 15px;
+                                            margin-top: 0px;
+                                            margin-left:15px;
+                                            border-radius: 3px;
+                                            height: 36px;
+                                            line-height: 26px;
+                                            background-color: #ffea00;
+                                            font-size: 16px;
+                                            color: #e10808;
+                                    }
+                        }
+                       >div{
+                               width:244px;
+                               height:40px;
+                               div{
+                                       padding: 0 10px;
+                                        text-align: center;
+                                        color: #2a2a2a;
+                                        float: left;
+                                         display: inline;
+                               }
+                        } 
+            }
+    }
+}
+#main .chatu{
+        width: 1230px;
+        height: 120px;
+        margin:0 auto;
+        a{
+            img{
+                    vertical-align: middle;
+                        width: 1230px;
+                        height: 90px;
+                        margin-top: 10px;
+            }
+        }
+}
+#main .contentF{
+           margin:0 auto;
+           width: 1230px;
+           .headline{
+                   margin-top: 30px;
+                    border-bottom: 2px solid #000;
+                    font-size: 16px;
+                    h1{
+                            display: inline-block;
+                            margin-right: 30px;
+                            border-bottom: 4px solid #000;
+                            font-size: 28px;
+                            font-weight: 600;
+                            color: #000;
+                    }
+           }
+}
+#main .cons-right li{
+         position: relative;
+            float: left;
+            width: 245px;
+            height: 272px;
+            border-bottom: 1px solid #eaeaea;
+            border-right: 1px solid #eaeaea;
+            overflow: hidden;
+        >a{
+            display: inline-block;
+            width:245px;
+            height:272px;
+        }
+        img{
+            position:relative;
+            top:0px;
+            left:0px;
+        }
+        .a1{
+                position: relative;
+                top: -250px;
+                left: 20px;
+                width: 188px;
+                font-size: 14px;
+                p{
+                    height: 30px;
+                    line-height: 30px;
+                    overflow: hidden; 
+                }
+                .t1{
+                                font-size: 18px;
+                           }
+                    .t2 ,.t3{
+                                color: #e10808;
+                    }
+        }
+        .imgdiv{
+                    position: relative;
+                    padding: 10px;
+                    text-align: center;
+        }
+        .mod-info{
+                    padding: 10px;
+                    p{
+                            color: #e10808;
+                            font-size: 14px;
+                            i{
+                                    font-size: 18px;
+                            }
+                            del{
+                                    margin-left: 5px;
+                                    color: #9b9b9b;
+                            }
+                    }
+        }
+        
+} 
+#main .cons-right li:hover{
+    a{
+        text-decoration: none;
+        color:#000000;
+    }
+    img{
+        animation:myfirst 1s ease;
+        transition: left 10s, ease transform 1.5s;
+    }
+    @keyframes myfirst{
+        from {top: 0px;}
+        to {top:-10px;}
+    }
+}
+#main .gua{
+    width: 100%;
+    padding: 10px 0;
+    margin-top:30px;
+    background-color: #f5f4f4;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    >div{
+        width:1230px;
+        margin:0 auto;
+    }
+}
+
+
+
+#footer{
+    width:100%;
+    .foot-top{
+                 width:100%;
+                 background-color: #f4f3f3;
+                .foot-content{
+                    width:1230px;
+                    margin:0 auto;
+                    height: 230px;
+                    .foot-left{
+                            padding: 50px 50px 0 20px;
+                            text-align: center;
+                            .appcode{
+                                         margin-bottom: 5px;
+                                         width: 116px;
+                                         height: 116px;
+                                        background: url(../img/20.jpg) no-repeat left bottom;
+                                        background-size:100% 100%;
+                                        
+                                        
+                            }
+                            p{
+                                    font-size: 12px;
+                                    color: #525252;
+                                    line-height: 13px;
+                            }
+                    }
+                    .foot-center{
+                            width:1230px;
+                            height:50px;
+                             .box-center{
+                                            padding-top: 50px;
+                                            li{
+                                                        float: left;
+                                                        padding: 0 35px 0 32px;
+                                                        border-right: 1px solid #eaeaea;
+                                                        h3{
+                                                                font-size: 18px;
+                                                                line-height: 36px;
+                                                                color: #525252;
+                                                                font-weight: 600;
+                                                        }
+                                                        a{
+                                                                    display: block;
+                                                                    font-size: 16px;
+                                                                    line-height: 40px;
+                                                                    color: #535353;
+                                                        }
+                                             }
+                             }
+                    }
+                    .foot-right{
+                             margin-left: 50px;
+                             .contact-us{
+                                    h3{
+                                                font-size: 18px;
+                                                line-height: 36px;
+                                                color: #525252;
+                                                font-weight: 600;
+                                    }
+                                    p{
+                                                 font-size: 16px;
+                                                 line-height: 25px;
+                                                 padding-top: 5px;
+                                    }
+                                    .advice{
+                                                margin-top: 6px;
+                                                width: 95px;
+                                                height: 26px;
+                                                border-radius: 5px;
+                                                border: 1px solid #d3d0d2;
+                                                text-align: center;
+                                                background-color: #f2f2f2;
+                                                span{
+                                                            font-size: 14px;
+                                                             line-height: 26px;
+                                                             cursor: pointer;
+                                                }
+                                    }
+                             }
+                             .attention-us{
+                                        position: relative;
+                                        padding-left: 70px;
+                                        h3{
+                                                    font-size: 18px;
+                                                    line-height: 36px;
+                                                    color: #525252;
+                                                    font-weight: 600;
+                                        }
+                                        .weiXin{
+                                                    margin: 10px 20px 0 0;
+                                                    float: left;
+                                                    width: 44px;
+                                                    height: 45px;
+                                                    background: url(../img/indexBottom.png) no-repeat -8px 0;                               
+                                        }
+                                        .weiXinCode{
+                                                        display: none;
+                                                        position: absolute;
+                                                        top: 92px;
+                                                        left: 30px;
+                                                        width: 122px;
+                                                        height: 130px;
+                                                        background: url(../img/indexBottomCode.png) no-repeat 0 -134px;
+                                        }
+                                        .weiBo{
+                                                margin-top: 10px;
+                                                float: left;
+                                                width: 45px;
+                                                height: 45px;
+                                                background: url(../img/indexBottom.png) no-repeat -8px -45px;
+                                        }
+                                        .weiBoCode{
+                                                   display: none;
+                                                    position: absolute;
+                                                    top: 92px;
+                                                    left: 30px;
+                                                    width: 122px;
+                                                    height: 130px;
+                                                    background: url(../img/indexBottomCode.png) no-repeat 0 -134px;
+                                        }
+                                        .weiXin:hover{
+                                                    background: url(../img/indexBottom.png) no-repeat -53px 0px;
+                                                    .weiXinCode{
+                                                                display: block;
+                                                                position: absolute;
+                                                                top: 92px;
+                                                                left: 30px;
+                                                                width: 122px;
+                                                                height: 130px;
+                                                                background: url(../img/indexBottomCode.png) no-repeat 0 -134px;
+                                                     }
+                                         }
+                                        .weiBo:hover{
+                                                 background: url(../img/indexBottom.png) no-repeat -53px -45px;
+                                                 .weiBoCode{
+                                                                       display: block;
+                                                                       position: absolute;
+                                                                        top: 92px;
+                                                                        left: 100px;
+                                                                        width: 122px;
+                                                                        height: 130px;
+                                                                        background: url(../img/indexBottomCode.png) no-repeat 0 -134px;
+                                                  }
+                                           } 
+                             }
+                    }
+                }
+    }
+    .foot-bottom{
+                width: 1200px;
+                margin: 30px auto 0 auto;
+                .bot-link{
+                            height: 20px;
+                            line-height: 20px;
+                            text-align: center;
+                            color: #ccc;
+                            a{
+                                    display: inline-block;
+                                    margin: 0 10px;
+                                    font-size: 12px;
+                                    color: #666666;
+                            }
+                }
+                .bot-copy{
+                                height: 40px;
+                                line-height: 40px;
+                                text-align: center;
+                                font-size: 12px;
+                                color: #666666;
+                }
+    }
+}

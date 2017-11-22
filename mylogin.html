@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/mylogin.css" />
+</head>
+<body>
+<div id="header">
+	<div>
+		<h1><a href="#">华强商城</a></h1>
+		<p>全场运费5元，满59元包邮</p>
+	</div>
+
+</div>
+<div id="main">
+	<div class="imgbox">
+		<img src="img/genglulogin.jpg" alt="" />
+	</div>
+	<div class="loginbox">
+		<h2>会员登录</h2>
+		<div id="confirmtionMessage" style="text-indent: 30px;color:#E10808"></div>
+		<form  method="post"  >
+			<ul class="m">
+				<li class="user" style="margin-bottom: 24px;">
+					<input type="text" id="userName" name="userName" placeholder="请输入您的手机号" onblur="checkUser()"/>
+				</li>
+				<li>
+					<input type="password" placeholder="请输入您的密码" id="passWord"  onblur="testpassWord()"/>
+				</li>
+				<li>
+					<input id="num1" type="text"  style="width:70px" placeholder="输入验证码"/>
+					<span id="show" ></span>
+					<div id="judge"></div>
+				</li>
+				<li>
+					<input id="checkbox" type="checkbox" name="checkbox" style="width:13px;height:13px;">
+					自动登录
+				</li>
+				<li>
+					<a href="#" class="denglu">
+						<input type="button" id="submitId" value="登录" />
+					</a>
+					<a href="#" style="line-height:39px;color:#888">
+						忘记密码了？
+					</a>
+				</li>
+				<li>
+					<p style="color:#333;font-size: 14px;">还不是强粉?<a href="regist.html" style="color: #3576f8;text-decoration: none;    line-height: 18px;font-size: 14px;text-align: left;">&nbsp;立即免费注册</a></p>
+				</li>
+			</ul>
+		</form>
+		<div class="login_sns">
+			<a class="tencent" href="#" style="background-position: 0 -147px;">QQ登录</a>
+			<a class="sinaWeibo" href="#" style="background-position: 0 -177px;">微博登录</a>
+			<a class="alipay" href="#" style="background-position: 0 -207px;">支付宝登录</a>
+			<a class="wechat" href="#" style="background-position: 0 -445px;">微信登录</a>
+		</div>
+	</div>
+</div>
+<div id="footer">
+	<div class="content">
+		<div class="copyright">
+			Copyright © 2010-2015 深圳市华强北在线商务有限公司 版权所有 <a target="_blank" href="#">粤ICP备12050212号-1</a>
+			<a href="#" target="_blank"><img alt="深圳网警" title="深圳网警" src="img/foot1.jpg"></a>
+			<a href="#"target="_blank"><img alt="经营许可证" title="增值电信业务经营许可证" src="img/foot2.jpg"></a>
+			<a href="#" rel="nofollow" target="_blank"><img alt="市场监制主体身份认证" title="市场监制主体身份认证" src="img/foot3.jpg"></a>
+			<a target="_blank" href="#">
+			<img src="img/foot4.jpg" title="电子商务消费者服务站" alt="电子商务消费者服务站"></a>
+			<a class="f_link" href="#" target="_blank">友情链接</a>
+			<a href="#" target="_blank" class="s_map">网站地图</a>关注我们：<a href="#" target="_blank"><img src="img/foot5.jpg" title="新浪微博" alt="新浪微博"></a>
+			<a href="#" target="_blank">
+			<img src="img/foot6.jpg" title="腾讯微博" alt="腾讯微博"></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+var numStr = "";
+var isTrue=true ;
+window.onload=function(){
+	check();
+	document.getElementById("show").onclick=function(){
+		check();
+	}
+	document.getElementById("num1").onblur=function(){
+		test();
+	}
+	document.getElementById("userName").onblur=function(){
+		testUserName();
+	}
+}
+
+function check(){
+	numStr="";
+	var arr=[];
+	var numArr=[];
+	var str="";
+	for(var i=49;i<=57;i++){
+		arr.push("<img src='images/"+i+".jpg'/>");
+		numArr.push(String.fromCharCode(i))
+	}
+	for(var i=65;i<=90;i++){
+		arr.push("<img src='images/"+i+".jpg'/>");
+		numArr.push(String.fromCharCode(i))
+	}
+	for(var i=97;i<=122;i++){
+		arr.push("<img src='images/"+i+".jpg'/>");
+		numArr.push(String.fromCharCode(i))
+	}
+	for(var i=0;i<4;i++){
+		var num=parseInt(Math.random()*arr.length);
+		str+=arr[num]+"";
+		numStr+=numArr[num];
+	}
+	//console.log(arr);
+	//console.log(numArr)
+	document.getElementById("show").innerHTML=str;
+}
+function test(){
+	var write = document.getElementById("num1").value.toLowerCase();
+	var see = numStr.toLowerCase();
+//		var isTrue=true ;
+	if(write==see){
+		document.getElementById("judge").style.display="block";
+		document.getElementById("judge").innerHTML="√";
+		return isTrue=true ;
+	}else{
+		document.getElementById("judge").style.display="block";
+		document.getElementById("judge").innerHTML="×";
+		return isTrue=false ;
+	}
+}
+
+
+//用户名的合法性验证
+function testUserName(){
+	var userName = document.getElementById("userName").value;
+
+	var regExp = /^1[35784][0-9]{9}$/;
+	
+	var str;
+//	var isTrue=true ;
+	if(regExp.test(userName)==false){
+		str="×用户名不合法！";
+		isTrue = false;
+	}else{
+		str="√用户名合法！";
+		
+		isTrue=true ;
+	}
+	document.getElementById("confirmtionMessage").innerHTML=str;
+	return isTrue;
+}
+
+
+//密码的合法性验证
+function testpassWord(){
+	var passWord = document.getElementById("passWord").value;
+
+	var regExp = /^[a-zA-Z_]\w{5,14}$/;
+	
+	var str;
+//	var isTrue=true ;
+	if(regExp.test(passWord)==false){
+		str="×密码不合法！";
+		isTrue = false;
+	}else{
+		str="√密码合法！";
+		isTrue=true ;
+	}
+	document.getElementById("confirmtionMessage").innerHTML=str;
+	return isTrue;
+}
+
+</script>
+
+
+<script type="text/javascript" src="js/cookieTools.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#submitId").click(function(){
+		$.post(
+			"mylogin.php",
+			{
+				"mobile":$("#userName").val(),
+				"password":$("#passWord").val()
+			},
+			function(data){
+				if(data=="1"){//登录成功！
+					//记录cookie
+						saveCookie("mobile",$("#userName").val(),7);
+					location.href="index.html";
+				}else{
+					alert("登录失败，用户名未注册或者密码不对！");
+				}
+			}
+		);
+	});
+});
+	
+</script>

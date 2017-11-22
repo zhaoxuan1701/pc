@@ -1,0 +1,287 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img { border:none; }
+address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal; }
+ul, ol{ list-style:none; }
+body {font:12px "Microsoft Yahei";}
+a {text-decoration:none; } 
+.left{float:left}
+.right{float:right}
+.clear:after{content:"";display:block;clear:both;height:0;overflow:hidden}
+.content{margin:0 auto}
+li {float: left;}
+
+
+#header{
+    width:100%;
+    height:80px;
+    border-bottom: 2px solid #E10808;
+    >div{
+            width: 980px;
+            margin: 0 auto;
+            padding: 15px 0;
+            h1{
+                    float: left;
+                    width: 200px;
+                    a{
+                            width: 200px;
+                            background: url(../img/sprites_index.png) no-repeat 0 top;
+                            display: inline-block;
+                            text-indent: -9999px;
+                            height: 50px;
+                            overflow: hidden;
+                    }
+            }
+           p{
+                    width: 125px;
+                    border-left: 2px solid #f0f0f0;
+                    padding-left: 20px;
+                    background: url(../img/sprites_index.png) no-repeat 20px -393px;
+                    height: 50px;
+                    text-indent: -9999px;
+                    overflow: hidden;
+                    display: inline-block;
+            }
+    }
+  
+}
+
+#main{
+    width:100%;
+    height:513px;
+    .content{
+            width: 980px;
+            padding-top: 10px;
+            padding-bottom: 44px;
+            position: relative;
+            z-index: 1;
+            .con-top{
+                        height: 42px;
+                        text-align: left;
+                        margin-bottom: 20px;
+                        background: url(../img/reg_title.jpg) no-repeat;
+                        border-bottom: solid 1px #e2e2e2;
+                        position: relative;
+                        >div{
+                                float: left;
+                                margin-left: 190px;
+                                height: 42px;
+                                background-color: #FFF;
+                                position: absolute;
+                                top: 11px;
+                                left: 0;
+                                color: #999;
+                                >div{
+                                            color: #676767;
+                                            border-bottom: none;
+                                            cursor: default;
+                                            background-color: #FFF;
+                                            float: left;
+                                            padding: 0 36px;
+                                            border-top: 1px #dbdbdb solid;
+                                            border-left: 1px #dbdbdb solid;
+                                            border-right: 1px #dbdbdb solid;
+                                            height: 30px;
+                                            p{
+                                                    font-size: 14px;
+                                                     margin-top: 5px;
+                                            }
+                                }
+                        }
+            }
+            .con-center{
+                    width: 870px;
+                    height: auto;
+                    float: left;
+                    margin-left: 40px;
+                    display: inline;
+                    ul{
+                            float: left;
+                            width: 835px;
+                            height: 35px;
+                            padding: 20px 15px 0 0;
+                            vertical-align: middle;
+                            li{
+                                    height: 36px;
+                                    line-height: 36px;
+                                    float: left;
+                                    vertical-align: middle;
+                                      .txtRed{
+                                                width: 250px;
+                                                height: 23px;
+                                                line-height: 23px;
+                                                padding-left: 27px;
+                                                padding-right: 20px;
+                                                position: absolute;
+                                                top: 8px;
+                                                right:0px;
+                                                float:left;
+                                                background: url(../img/reg_tipbg.jpg) 0px 0px no-repeat;
+                                                display: none;
+                                       }
+                            }
+                            .fontN{
+                                        width: 100px;
+                                        text-align: right;
+                                        color: #333;
+                                        margin-right: 5px;
+                                        font-size: 14px;
+                            }
+                            .input{
+                                    width: 680px;
+                                    color: #333;
+                                    text-align: left;
+                                    vertical-align: middle;
+                                    position: relative;
+                                    z-index: 10;
+                                    input{
+                                        width: 310px;
+                                        height: 28px;
+                                        line-height: 28px;
+                                        border: 1px #c9c8c8 solid;
+                                        text-align: left;
+                                        color: #333;
+                                        padding: 5px;
+                                        background: url(../img/login_bg.png) no-repeat;
+                                        vertical-align: middle;
+                                    }
+                            }
+                    }
+            }
+    }
+    #getMoblieCaptcha{
+            color: #707070;
+            position: absolute;
+            top: 4px;
+            left: 324px;
+            width: 100px;
+            height: 29px;
+            margin: 0;
+            padding: 0;
+            background: url(../img/login_group.jpg) left -464px no-repeat;
+            text-align: center;
+            line-height: 29px;
+    }
+       #show{
+                                   display:inline-block;
+                                    width:153px;
+                                    height:40px;
+                                    float:left;
+                                    img{
+                                        width:38px;
+                                        height:40px;
+                                    }
+        }
+      
+}
+#main #hqb_protocol input{
+        margin: 0 8px 0 10px;
+    vertical-align: middle;
+    height: 20px;
+}
+#main .server_agreement{
+        float: left;
+        font-size: 14px;
+        margin-left: 105px;
+        margin-top: 24px;
+        display: inline;
+        text-align: left;
+}
+#main .w960{
+    width: 980px;
+}
+#main .w960 .txtGreNum{
+        border: 0 none;
+    width: 142px;
+    height: 39px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 145px;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 16px;
+    font-weight: inherit;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+#main .w960 #register_submit{
+        border: 0 none;
+        width: 142px;
+        height: 39px;
+        cursor: pointer;
+        margin-top: 20px;
+        margin-left: 145px;
+        font-size: 20px;
+        color: #fff;
+      margin-bottom: 16px;
+        font-weight: inherit;
+        line-height: 1.5;
+        vertical-align: middle;
+        background: url(../img/login_group.jpg) left -82px no-repeat;
+}
+#main .w960 #register_submit:hover{
+        background: url(../img/login_group.jpg) left -125px no-repeat;
+}
+#main .uni_login_box{
+        width: 170px;
+    height: 150px;
+    border: solid 1px #e2e2e2;
+    padding: 20px 25px;
+    font-size: 12px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+}
+#main .uni_login_box .uni_tt{
+        margin: 0 0 25px 0;
+    padding: 0;
+}
+#main .uni_login_box .uni_list{
+        margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#main .uni_login_box .uni_list li{
+        float:none;
+        margin: 10px 0;
+} 
+
+#main .uni_login_box .uni_list li a {
+    display: block;
+    height: 17px;
+    text-decoration: none;
+    padding-left: 22px;
+    color: #666;
+    background: url(../img/reg_uni.jpg)no-repeat;
+}     
+
+
+
+
+
+
+#footer{
+            height: 80px;
+            text-align: center;
+            border-top: 1px solid #EEE;
+            .content{
+                        width: 980px;
+                        height: 80px;
+                        .copyright{
+                                    height: 22px;
+                                    padding: 24px 0 0;
+                                    line-height: 22px;
+                                    color: #808080;
+                                    text-align: center;
+                                    a{
+                                            margin: 0 2px;
+                                             color: #808080;
+                                    }
+                                    a:hover{
+                                            text-decoration:underline;
+                                    }
+                        }
+             }
+}

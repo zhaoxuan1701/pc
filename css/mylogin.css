@@ -1,0 +1,193 @@
+/* CSS Document */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+  margin: 0;
+  padding: 0; }
+
+fieldset, img {
+  border: none; }
+
+address, caption, cite, code, dfn, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+ul, ol {
+  list-style: none; }
+
+body {
+  font: 12px "Microsoft Yahei"; }
+
+a {
+  text-decoration: none; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+.content {
+  margin: 0 auto; }
+
+li {
+  float: left; }
+
+#header {
+  width: 100%;
+  height: 80px;
+  border-bottom: 2px solid #E10808; }
+  #header > div {
+    width: 980px;
+    margin: 0 auto;
+    padding: 15px 0; }
+    #header > div h1 {
+      float: left;
+      width: 200px; }
+      #header > div h1 a {
+        width: 200px;
+        background: url(../img/sprites_index.png) no-repeat 0 top;
+        display: inline-block;
+        text-indent: -9999px;
+        height: 50px;
+        overflow: hidden; }
+    #header > div p {
+      width: 125px;
+      border-left: 2px solid #f0f0f0;
+      padding-left: 20px;
+      background: url(../img/sprites_index.png) no-repeat 20px -393px;
+      height: 50px;
+      text-indent: -9999px;
+      overflow: hidden;
+      display: inline-block; }
+
+#main {
+  margin: 0 auto 30px;
+  padding: 30px 0 0;
+  width: 980px;
+  overflow: hidden; }
+  #main .imgbox {
+    width: 620px;
+    float: left;
+    display: inline;
+    overflow: hidden; }
+    #main .imgbox img {
+      width: 620px;
+      height: auto; }
+  #main .loginbox {
+    border: 1px #d7d7d7 solid;
+    background: #f5f5f5;
+    width: 350px;
+    float: right; }
+    #main .loginbox h2 {
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0;
+      padding: 20px 24px 15px;
+      height: 20px;
+      line-height: 20px;
+      color: #666;
+      display: block;
+      overflow: hidden; }
+    #main .loginbox ul {
+      padding: 0 24px 20px;
+      overflow: hidden; }
+      #main .loginbox ul li {
+        margin-bottom: 14px;
+        position: relative;
+        width: 290px; }
+        #main .loginbox ul li input {
+          float: left;
+          width: 268px;
+          height: 28px;
+          padding: 5px 10px;
+          color: #666;
+          font-size: 12px;
+          border: 1px solid #ababab;
+          background: url(../img/logininput.png) 0 -237px no-repeat;
+          vertical-align: middle; }
+        #main .loginbox ul li #submitId {
+          float: left;
+          width: 135px;
+          height: 39px;
+          background: none;
+          border: none 0;
+          font-size: 21px;
+          text-align: center;
+          color: #fff;
+          cursor: pointer; }
+      #main .loginbox ul #show {
+        display: inline-block;
+        width: 153px;
+        height: 40px;
+        float: left; }
+        #main .loginbox ul #show img {
+          width: 38px;
+          height: 40px; }
+      #main .loginbox ul #judge {
+        display: none;
+        background-color: red;
+        font-size: 20px;
+        line-height: 20px;
+        float: left;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        color: #ffffff;
+        margin-top: 10px;
+        text-align: center; }
+      #main .loginbox ul .denglu {
+        color: #888;
+        text-decoration: none;
+        display: inline-block;
+        float: left;
+        width: 135px;
+        height: 39px;
+        overflow: hidden;
+        vertical-align: middle;
+        background: url(../img/logininput.png) no-repeat 0 0;
+        margin-right: 14px; }
+      #main .loginbox ul .denglu:hover {
+        background: url(../img/logininput.png) no-repeat 0 -98px; }
+    #main .loginbox .login_sns {
+      margin: 0;
+      padding: 0 24px 18px;
+      height: 20px;
+      line-height: 20px;
+      display: block;
+      overflow: hidden; }
+      #main .loginbox .login_sns a {
+        margin: 0;
+        padding: 0 0 0 22px;
+        height: 20px;
+        color: #999;
+        font-size: 12px;
+        display: inline-block;
+        background: url(../img/logininput.png) no-repeat;
+        text-decoration: none; }
+
+#footer {
+  height: 80px;
+  text-align: center;
+  border-top: 1px solid #EEE; }
+  #footer .content {
+    width: 980px;
+    height: 80px; }
+    #footer .content .copyright {
+      height: 22px;
+      padding: 24px 0 0;
+      line-height: 22px;
+      color: #808080;
+      text-align: center; }
+      #footer .content .copyright a {
+        margin: 0 2px;
+        color: #808080; }
+      #footer .content .copyright a:hover {
+        text-decoration: underline; }
+
+/*# sourceMappingURL=mylogin.css.map */

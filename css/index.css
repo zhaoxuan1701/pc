@@ -1,0 +1,194 @@
+@charset "utf-8";
+/* CSS Document */
+/*重置样式*/
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img { border:none; }
+address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal; }
+ul, ol{ list-style:none; }
+body {font:12px "微软雅黑";}
+a {text-decoration:none; }
+a:visited { color:#666; }
+a:hover, a:active, a:focus { color:#ff8400; text-decoration:underline; } 
+.left{float:left}
+.right{float:right}
+.clear:after{content:"";display:block;clear:both;height:0;overflow:hidden}
+.content{margin:0 auto}
+li {
+	float: left
+}
+
+<!------------------------header------------------------------> 
+#header {
+	width: 100%;
+	height: 200px
+}
+
+#header .content {
+	width: 1200px
+}
+
+#header .nav-top {
+	width: 100%;
+	height: 40px;
+	background: #fbfbfb;
+	border-bottom: 1px solid #f2f2f2;
+}
+
+#header .nav-top a {
+	display: inline-block;
+	font-size: 12px;
+	color: #686868;
+	line-height: 40px;
+}
+#header .nav-top  li a {
+	    height: 40px;
+    	display: block;
+   		 z-index: 99;
+   		 font-size: 12px;
+		color: #686868;
+		line-height: 40px;
+}
+#header .sec-navbox{
+		    display: none;
+		    position: absolute;
+		    top: 0px;
+		    left: 0px;
+		    background-color: #fff;
+		    border: 1px solid #ccc;
+		    width: 190px;
+}
+#header .sec-navbox a{
+	    display: block;
+	    padding: 0 10px;
+	    height: 25px;
+	    line-height: 25px;
+	    text-decoration: none;
+	    text-indent: 0;
+	    color: #898989;
+	    position: relative;
+        z-index: 99;
+        float: left;
+}
+
+#header .nav-top li {
+	width: 85px;
+	height: 43px;
+	text-align: center;
+	position: relative;
+}
+
+#header .nav-top ul li:hover {
+	background: white;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	height:40px;
+}
+#header .nav-top ul a:hover {
+		background: white;
+		color:#E10808;
+}
+#header .nav-top ul li:hover .sec-navbox{
+		        display: block;
+			    position: absolute;
+			    top: 40px;
+			    right: -1px;
+			    background-color: #fff;
+			    border: 1px solid #ccc;
+			    width: 190px;
+}
+
+#header .nav-middle {
+	width: 100%;
+	height: 115px
+}
+
+#header .nav-middle .content {
+	padding: 25px 0 10px;
+	height: 80px
+}
+
+#header .nav-middle .logo {
+	width: 430px;
+	height: 80px
+}
+
+#header .nav-middle dl {
+	width: 430px;
+	height: 80px;
+	margin: 10px 0 0 30px;
+}
+
+#header .nav-middle dt {
+	width: 430px;
+	height: 32px;
+}
+
+#header .nav-middle .cont {
+	width: 369px;
+	height: 26px;
+	float: left
+}
+
+#header .nav-middle .btn {
+	width: 46px;
+	height: 32px;
+	border-radius: 0 5px 5px 0;
+	float: left;
+	text-indent: -1000000px;
+	background-image:url(../img/sarch.jpg);
+	border: none
+}
+
+#header .nav-middle dd a {
+	line-height:30px;
+}
+#header .nav-middle .shoppingcar{
+	margin-top: 10px;
+    width: 135px;
+    height: 33px;
+}
+#header .shoppingcar a{
+	position: relative;
+    display: block;
+    padding: 6px 8px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #eaeaea;
+    color: #232323;
+}
+
+#header .shoppingcar span{
+	display: inline-block;
+    float: left;
+    margin-right: 15px;
+    width: 22px;
+    height: 22px;
+    background: url(http://s.hqbcdn.com/assets/v4/images/newindex/headerListSprites.png) right bottom;
+}
+    
+
+#header .nav-bottom {
+	width: 100%;
+	height: 38px;
+	background: #e10808
+}
+#header .nav-bottom li{
+    width: 150px;
+    color: #fff;
+    text-align: left;
+}
+#header .nav-bottom li a{
+	line-height: 38px;
+	display: block;
+    height: 100%;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+#header .nav-bottom li:hover{
+	background-color:#952737;
+}
+
+<!-----------------------banner---------------------------->
